@@ -109,7 +109,7 @@
             @csrf
             @method('DELETE')
             <div class="modal-buttons">
-                <button type="submit" class="btn-close">Yes, Cancel</button>
+                <button type="submit" class="btn-close">Yes, Delete</button>
                 <button type="button" class="btn-close" onclick="closeDeleteModal()">No, Go Back</button>
             </div>
         </form>

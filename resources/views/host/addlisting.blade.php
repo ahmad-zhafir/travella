@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <label for="images">Upload Images</label>
+                <label for="images">Upload Images (Max 10 MB per image)</label>
                 <input type="file" id="images" name="images[]" accept="image/*" multiple />
 
 
