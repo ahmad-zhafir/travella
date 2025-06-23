@@ -1,0 +1,153 @@
+
+        /* Reset and base */
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body, html {
+        height: 100%;
+        margin: 0;
+        background: 
+            linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff; /* light text for contrast */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .login-container {
+            background: #FFFFFF; /* White background for the form */
+            width: 350px;
+            border-radius: 12px;
+            padding: 30px 25px 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .login-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #FF5A5F; /* Airbnb coral color */
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            user-select: none;
+        }
+        .tagline {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        form {
+            width: 100%;
+            text-align: left;
+        }
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #FF5A5F; /* Focus color */
+            box-shadow: 0 0 5px #FF5A5Faa;
+        }
+
+        button {
+            margin-top: 30px;
+            width: 100%;
+            background: #FF5A5F; /* Button color */
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px #FF5A5Faa;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background: #E03E3E; /* Darker shade on hover */
+        }
+
+        .extra-links {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+        .extra-links a {
+            color: #FF5A5F; /* Link color */
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 8px;
+            transition: color 0.2s ease;
+        }
+        .extra-links a:hover {
+            color: #E03E3E; /* Darker shade on hover */
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            margin-top: 35px;
+            font-size: 0.8rem;
+            color: #aaa;
+            font-style: italic;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            padding-right: 40px; /* space for the icon */
+        }
+
+        .toggle-eye {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #888;
+        }
+   
+
+        /* Responsive */
+        @media (max-width: 400px) {
+            .login-container {
+                width: 90vw;
+                padding: 25px 20px 30px;
+            }
+        }

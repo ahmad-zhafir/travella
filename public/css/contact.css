@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+
+    /* Navbar styles */
+    nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 60px;
+      width: 100%;
+    }
+
+    .nav-left {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #ff385c;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 24px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .nav-center a {
+      color: #555;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-center a:hover {
+      background-color: #ff385c;
+      color: white;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-button {
+      background-color: transparent;
+      border: 1.8px solid #ff385c;
+      color: #ff385c;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 22px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-button:hover {
+      background-color: #ff385c;
+      color: white;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(31, 32, 65, 0.05);
+      padding: 36px 32px 40px 32px;
+      margin: 40px auto;
+      /* ✅ Centers form and adds top spacing */
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 28px;
+      margin-bottom: 16px;
+      color: #222222;
+    }
+
+    p.description {
+      color: #717171;
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      font-size: 13px;
+      color: #484848;
+      margin-bottom: 6px;
+      user-select: none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 16px;
+      transition: border-color 0.2s ease;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 44px;
+      background-color: #fff;
+      appearance: none;
+      width: 100%;
+      /* ✅ Add this */
+    }
+
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #ff385c;
+      /* Airbnb's primary accent color */
+      box-shadow: 0 0 0 3px rgba(255, 56, 92, 0.15);
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    /* Custom arrow for select */
+    select {
+      background-image: url("data:image/svg+xml,%3csvg fill='none' height='24' stroke='%23484848' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3e%3cpolyline points='6 9 12 15 18 9'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      background-size: 16px 16px;
+    }
+
+    button.send-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ff385c;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      padding: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    button.send-btn:disabled {
+      background-color: #e8e8e8;
+      color: #999999;
+      cursor: not-allowed;
+    }
+
+    button.send-btn:hover:not(:disabled) {
+      background-color: #e91e48;
+    }
+
+    .material-icons {
+      font-size: 20px;
+      margin-left: 8px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      body {
+        padding: 16px;
+      }
+
+      .container {
+        padding: 28px 24px 32px 24px;
+      }
+    }
+
+    footer {
+      background-color: #222;
+      color: #eee;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+    }

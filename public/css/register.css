@@ -1,0 +1,208 @@
+        /* Reset and base */
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body, html {
+            min-height: 100vh;
+            margin: 0;
+            background: 
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 0; /* top and bottom padding now works */
+            box-sizing: border-box;
+        }
+
+        .register-container {
+            background: #FFFFFF; /* White background for the form */
+            width: 400px;
+            border-radius: 12px;
+            padding: 35px 30px 45px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .register-container:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #FF5A5F; /* Airbnb coral color */
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            user-select: none;
+        }
+        .tagline {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        /* Role toggle segmented control */
+        .role-toggle {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .role-toggle input[type="radio"] {
+            display: none;
+        }
+
+        .role-toggle label {
+            flex: 1;
+            height: 50px;
+            aspect-ratio: 1 / 1; /* Makes it a square */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eee;
+            font-weight: 600;
+            color: #555;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .role-toggle input[type="radio"]:checked + label {
+            background: #FF5A5F;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255,90,95,0.5);
+        }
+
+        form {
+            width: 100%;
+            text-align: left;
+        }
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #444;
+            display: block;
+            margin-bottom: 6px;
+            margin-top: 16px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #FF5A5F;
+            box-shadow: 0 0 5px #FF5A5Faa;
+        }
+
+        .checkbox-container {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        .checkbox-container label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: normal;
+        }
+        .checkbox-container a {
+            color: #FF5A5F;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .checkbox-container a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            margin-top: 30px;
+            width: 100%;
+            background: #FF5A5F;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px #FF5A5Faa;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background: #E03E3E;
+        }
+
+        .extra-links {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+        .extra-links a {
+            color: #FF5A5F;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 8px;
+            transition: color 0.2s ease;
+        }
+        .extra-links a:hover {
+            color: #E03E3E;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 440px) {
+            .register-container {
+                width: 90vw;
+                padding: 30px 20px 40px;
+            }
+        }
+
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+            margin-bottom: 1em; /* add spacing if needed */
+        }
+
+        .password-wrapper input {
+            width: 100%;
+            padding-right: 40px; /* space for the icon */
+        }
+
+        .toggle-eye {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 18px;
+            color: #888;
+            user-select: none;
+        }

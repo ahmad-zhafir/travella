@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #222;
+  }
+  /* Navbar styles */
+  nav {
+    position: sticky;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
+  }
+  .nav-left {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ff385c;
+    cursor: pointer;
+    user-select: none;
+  }
+  .nav-center {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .nav-center a {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .nav-center a:hover {
+    background-color: #ff385c;
+    color: white;
+  }
+  .nav-right {
+    display: flex;
+    gap: 16px;
+  }
+  .nav-button {
+    background-color: transparent;
+    border: 1.8px solid #ff385c;
+    color: #ff385c;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 22px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .nav-button:hover {
+    background-color: #ff385c;
+    color: white;
+  }
+
+  header {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin: 0 0 0.2rem 0;
+    z-index: 1;
+  }
+  header p {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+    z-index: 1;
+  }
+  .search-bar {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    z-index: 1;
+    overflow: hidden;
+  }
+  .search-bar > div {
+    flex: 1;
+    padding: 15px 20px;
+    border-right: 1px solid #eee;
+  }
+  .search-bar > div:last-child {
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-bar label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 6px;
+  }
+  .search-bar input, .search-bar select {
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  .search-button {
+    background-color: #ff385c;
+    color: white;
+    border: none;
+    font-size: 1.15rem;
+    padding: 16px 28px;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .search-button:hover {
+    background-color: #e03150;
+  }
+  main {
+    width: 95%;
+    margin: 2rem auto 4rem;
+    padding: 0 20px;
+  }
+  h2.section-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #111;
+  }
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px;
+  }
+  .listing-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease;
+  }
+  .listing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+  .listing-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  .listing-info {
+    padding: 16px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .listing-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 6px 0;
+    color: #222;
+  }
+  .listing-location {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  .listing-details {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  .listing-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ff385c;
+  }
+  footer {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Modal background */
+  #dateModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent black */
+  }
+
+  /* Modal content box */
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Push it down a bit */
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .modal-content label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+
+  .modal-content input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .modal-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modal-buttons .cancel-btn {
+    background-color: #ccc;
+  }
+
+  .modal-buttons .submit-btn {
+    background-color: #ff385c;
+    color: white;
+  }
+
+  /* Close button (optional) */
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aaa;
+  }
+
+  .close-btn:hover {
+    color: #000;
+  }
+
+
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    .nav-center {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+      padding: 0 12px;
+    }
+  }
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2.1rem;
+      padding: 0 12px;
+      text-align: center;
+    }
+    header p {
+      font-size: 1rem;
+      padding: 0 12px;
+      text-align: center;
+    }
+    .search-bar {
+      flex-direction: column;
+      border-radius: 12px;
+    }
+    .search-bar > div {
+      border-right: none;
+      border-bottom: 1px solid #eee;
+      padding: 12px 16px;
+    }
+    .search-bar > div:last-child {
+      border-bottom: none;
+      padding: 12px 16px;
+      border-radius: 0 0 12px 12px;
+    }
+    .search-button {
+      border-radius: 0 0 12px 12px;
+      width: 100%;
+      padding: 14px 0;
+      font-size: 1.1rem;
+    }
+  }
+
+
+  /* Modal Styling */
+
+
+.btn-close {
+    background-color: #ef4444; /* Green */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the text inside */
+    display: inline-block; /* Ensure it's aligned with other buttons */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn-close:hover {
+    background-color: #dc2626; /* Darker green for hover */
+}

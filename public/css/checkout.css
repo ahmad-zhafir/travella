@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: #222;
+  margin: 0;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ff385c;
+  cursor: pointer;
+  user-select: none;
+}
+
+main {
+  margin: 2rem auto;
+  width: 95%;
+  padding: 0 20px 0 20px;
+}
+
+/* Layout */
+.page-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  display: flex;
+  width: 95%;
+  gap: 40px;
+}
+
+.left-section {
+  flex: 2;
+}
+
+/* Header */
+.header {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+}
+
+.back-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #f0f0f0;
+  color: gray;
+}
+
+/* Confirm Booking Button */
+.confirm-booking {
+  background-color: #ff385c;
+  margin: 30px 0 0 0;
+  text-align: center;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.confirm-booking:hover {
+  background-color: #ff0050;
+}
+
+.confirm-booking p {
+  color: white;
+}
+
+/* Trip Info */
+.trip-section h2 {
+  margin-bottom: 15px;
+
+}
+
+.trip-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+
+.trip-detail h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.trip-summary-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.trip-section {
+  flex: 1;
+  max-width: 800px;
+}
+
+/* Booking Form Section */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 95%;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-top: 20px;
+  
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #333;
+}
+
+.booking-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus {
+  border-color: #ff3860;
+  outline: none;
+}
+
+.booking-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  font-family: Arial, sans-serif;
+  position: relative;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+}
+
+.fa-chevron-left {
+  color: black;
+}
+
+.booking-section {
+  text-align: left;
+}
+
+.label,
+.labelright {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.time,
+.timeright {
+  font-size: 14px;
+  color: #666;
+}
+
+.nights {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1f3f5;
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Summary Card */
+.summary-card {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  flex: 1;
+  width: 95%;
+}
+
+.summary-image {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.summary-text h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.summary-text p {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.price-details,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.total-row {
+  font-size: 16px;
+}
+
+.price-breakdown {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-back {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+  background: #eee;
+  color: #222;
+  margin-bottom: 16px;
+
+
+}
+
+.btn-back:hover {
+  background: #ddd;
+}
+
+.back-button-wrapper {
+  width: 95%;
+  max-width: 800px;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.error-summary {
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-confirm {
+  all: unset;         /* Reset all default button styles */
+  cursor: pointer;    /* Show pointer cursor on hover */
+  color: #ffffff;     /* Example: blue text color */
+  font-weight: 600;   /* Match your Poppins semi-bold */
+  font-size: 1rem;    /* Adjust size as needed */
+  text-align: center;
+  display: inline-block;
+  width: 100%;        /* Optional: make full width */
+  user-select: none;  /* Prevent text selection on click */
+}
+
+/* Modal Styling */
+        .modal {
+            display: none;/* Initially hidden */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 450px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-close {
+            flex: 1;
+            background-color: #ff385c;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-close:hover {
+            background-color: #dc2626;
+        }
+
+        .modal-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }

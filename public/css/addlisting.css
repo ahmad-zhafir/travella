@@ -1,0 +1,261 @@
+        /* Use page 1's font and base styles */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #222;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 60px;
+            width: 100%;
+        }
+
+        .nav-left {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ff385c;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-button {
+            background-color: transparent;
+            border: 1.8px solid #ff385c;
+            color: #ff385c;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 22px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ff385c;
+            color: white;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 24px;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+
+        main {
+            flex: 1;
+            margin-top: 60px;
+            display: block;
+            padding: 40px 20px 60px;
+        }
+
+        .container {
+            align-items: center;
+            width: 95%;
+            max-width: 800px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px 40px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ff385c;
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus,
+        textarea:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #ff385c;
+            box-shadow: 0 0 8px #ff385c88;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+
+        .amenities {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+            margin-top: 10px;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: #555;
+            user-select: none;
+        }
+
+        .amenity-item input[type="checkbox"] {
+            margin: 0;
+            padding: 0;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            /* Use transform to vertically align */
+            transform: translateY(5px);
+        }
+
+        .amenity-item label {
+            cursor: pointer;
+            line-height: 1;
+        }
+
+
+
+        .number-group {
+            display: flex;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .number-input-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .image-preview {
+            width: 120px;
+            height: 80px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .submit-button {
+            margin-top: 30px;
+            width: 100%;
+            background: #ff385c;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 14px 0;
+            border: none;
+            border-radius: 22px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px #ff385caa;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #e03150;
+        }
+
+        footer {
+            background-color: #222;
+            color: #eee;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s;
+            background: #eee;
+            color: #222;
+            margin-bottom: 16px;
+                    
+        }
+
+        .btn-back:hover {
+            background: #ddd;
+        }
+        
+        .back-button-wrapper{
+            width: 95%;
+            max-width: 800px;
+            margin: 0 auto 16px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .number-group {
+                flex-direction: column;
+            }
+        }

@@ -1,0 +1,362 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #222;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 60px;
+        }
+
+        .nav-left {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #ff385c;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 24px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .nav-center a {
+            color: #555;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-center a:hover {
+            background-color: #ff385c;
+            color: white;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-button {
+            background-color: transparent;
+            border: 1.8px solid #ff385c;
+            color: #ff385c;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 22px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-button:hover {
+            background-color: #ff385c;
+            color: white;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 2000px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-top: 10px;
+            gap: 20px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .location {
+            color: #666;
+            margin-top: 4px;
+            margin-left: 30px;
+        }
+
+        .list-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            border-radius: 10px;
+        }
+
+        .image {
+            margin-top: 20px;
+            margin-left: 30px;
+            flex: 1;
+        }
+
+        .image img {
+            width: 450px;
+            height: 320px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .list-details {
+            flex: 2;
+            min-width: 300px;
+            margin: auto 0 auto 50px;
+        }
+
+        .booking-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+            font-family: Arial, sans-serif;
+            position: relative;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .fa-chevron-left {
+          color: black;
+        }
+
+        .booking-section {
+            text-align: left;
+        }
+
+        .label,
+        .labelright {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .date {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .time,
+        .timeright {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .nights {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f1f3f5;
+            color: #555;
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .stay {
+            color: #0096FF;
+            font-weight: bold;
+        }
+
+        .details {
+            padding: 30px;
+            margin-top: 24px;
+            background: linear-gradient(to bottom right, #ffffff, #f2f4f8);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .details:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .details h2 {
+            margin-top: 0;
+            color: #1a1a1a;
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .details p {
+            margin: 12px 0;
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .upcoming {
+            font-style: italic;
+            background-color: #dceeff;
+            padding: 10px;
+            border-left: 4px solid #0074cc;
+            border-radius: 6px;
+            color: #004080;
+            width: fit-content;
+        }
+
+        .completed {
+            font-style: italic;
+            background-color: #d4f4dd;
+            padding: 10px;
+            border-left: 4px solid #008000;
+            border-radius: 6px;
+            color: #006400;
+            width: fit-content;
+        }
+
+        .cancelled {
+            font-style: italic;
+            background-color: #ffb8bf;
+            padding: 10px;
+            border-left: 4px solid #ff385c;
+            border-radius: 6px;
+            color: #8a6d3b;
+            width: fit-content;
+        }
+
+
+
+        .button {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .button button {
+            background: linear-gradient(to right, #ff5e62, #ff9966);
+            color: white;
+            font-weight: 600;
+            border: none;
+            transition: background 0.3s ease;
+        }
+
+        .button button:hover {
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+        }
+
+        footer {
+            background-color: #222;
+            color: #eee;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .list-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .booking-box {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 10px;
+            }
+
+            .labelright,
+            .timeright {
+                text-align: left;
+            }
+
+            .booking-section.left,
+            .booking-section.right {
+                width: 100%;
+                text-align: left;
+            }
+
+            .nights {
+                position: static;
+                transform: none;
+                margin-top: 10px;
+            }
+
+            .list-details {
+                margin: 20px 0 0 0;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                padding: 10px 20px;
+            }
+
+            .nav-center {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .nav-right {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .title {
+                font-size: 22px;
+                margin-left: 10px;
+            }
+
+            .location {
+                margin-left: 10px;
+            }
+
+            .image {
+                margin-left: 0;
+            }
+
+            .list-details {
+                margin-left: 0;
+            }
+
+            .button button {
+                width: 100%;
+            }
+        }
+
+
