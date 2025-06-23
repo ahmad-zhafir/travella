@@ -36,7 +36,7 @@ Install the following:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/ahmad-zhafir/travella.git
+git clone https://github.com/your-username/travella.git
 cd travella
 ```
 
@@ -53,7 +53,7 @@ npm install
 npm run dev
 ```
 
-4. **Copy and set up `.env` file**
+4. **Copy and set up **``** file**
 
 ```bash
 cp .env.example .env
@@ -71,13 +71,25 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-6. **Run migrations (and seeders if any)**
+6. **Import sample database (optional)**
+
+You can use the provided sample SQL file located in `database/sample/travella_sample.sql`:
+
+If using MySQL CLI:
+
+```bash
+mysql -u root -p travella_db < database/sample/travella_sample.sql
+```
+
+Or use phpMyAdmin to import the file.
+
+7. **Run migrations (optional if using sample DB)**
 
 ```bash
 php artisan migrate
 ```
 
-7. **Serve the application**
+8. **Serve the application**
 
 ```bash
 php artisan serve
@@ -86,6 +98,4 @@ php artisan serve
 Then visit: [http://localhost:8000](http://localhost:8000)
 
 ---
-
-
 
